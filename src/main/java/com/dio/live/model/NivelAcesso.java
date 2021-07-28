@@ -1,10 +1,10 @@
 package com.dio.live.model;
 
+
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -13,7 +13,7 @@ import java.util.Objects;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class JornadaTrabalho {
+public class NivelAcesso {
     @Id
     private long id;
     private String descricao;

@@ -1,10 +1,10 @@
 package com.dio.live.model;
 
+
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -13,9 +13,16 @@ import java.util.Objects;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class JornadaTrabalho {
+public class Empresa {
     @Id
-    private long id;
+    private Long id;
     private String descricao;
+    private String cnpj;
+    private String endereco;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String telefone;
+
 
 }

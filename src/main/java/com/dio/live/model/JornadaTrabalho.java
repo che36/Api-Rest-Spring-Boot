@@ -13,8 +13,10 @@ import java.util.Objects;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class JornadaTrabalho {
     @Id
+    @GeneratedValue
     private long id;
     private String descricao;
 

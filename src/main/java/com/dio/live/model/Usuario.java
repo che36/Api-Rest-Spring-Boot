@@ -14,6 +14,7 @@ import java.time.LocalTime;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class Usuario {
     @Id
     private Long id;

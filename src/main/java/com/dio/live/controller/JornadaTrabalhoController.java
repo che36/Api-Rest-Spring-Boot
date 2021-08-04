@@ -20,14 +20,14 @@ public class JornadaTrabalhoController {
         return jornadaService.saveJornada(jornadaTrabalho);
     }
 
-    @GetMapping
+    @GetMapping()
     public List<JornadaTrabalho> getJornadaList() {
         return jornadaService.findAll();
     }
 
     @GetMapping("/idJornada")
     public ResponseEntity<JornadaTrabalho> getJornadaById(@PathVariable("idJornada") Long idJornada) throws Exception {
-        return ResponseEntity.ok(jornadaService.getById(idJornada).orElseThrow(() -> new Exception("jornada nao encontrada.")));
+        return ResponseEntity.ok(jornadaService.getById(idJornada).orElseThrow(() -> new Exception("jornada nao encontrada.!!")));
 
     }
     
@@ -36,8 +36,8 @@ public class JornadaTrabalhoController {
         return jornadaService.updateJornada(jornadaTrabalho);
     }
 
-    @GetMapping("/idJornada")
-    public ResponseEntity<JornadaTrabalho>deleteById(@PathVariable("idJornada") Long idJornada) throws Exception {
+    @DeleteMapping("/idJornada")
+    public ResponseEntity deleteById(@PathVariable("idJornada") Long idJornada) throws Exception {
         try {
             jornadaService.deleteJornada(idJornada);
         } catch (Exception e) {

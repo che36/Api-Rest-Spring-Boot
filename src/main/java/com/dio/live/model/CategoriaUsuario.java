@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class CategoriaUsuario {
     @Id
     private long id;
